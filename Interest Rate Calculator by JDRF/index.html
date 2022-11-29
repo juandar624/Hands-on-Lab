@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Interest Calculator</title>
+        <script src="script.js"></script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+        <div class="maindiv">
+            <h1> Simple Interest Calculator </h1>
+                <form onsubmit="return false">
+                    <div class="formdiv">
+                    <label>Amount:</label> 
+                    <input type="number"  id="principal">  
+                    </div>
+                    <div class="formdiv">
+                    <label>Rate:</label>
+                    <input type="range" id="rate" step="0.25" min="1" max="20" value="10.25" oninput="updateRate()"> 
+                        <span id="rate_val">
+                            10.25%
+                        </span>
+                    </div>
+                    <div class="formdiv">
+                    <label>Years:</label>
+                    <select id="years">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                    </select> 
+                    </div>
+                    <div class="formdiv">
+                    <label>Interest:</label>
+                    <span id="result" class="answertext"> 
+                    </span>
+                    </div>
+                    <div class="formdiv">
+                        <button onclick="compute()">Compute Interest</button>
+                    <span id="result" class="result">
+                    </span>
+                    </div>
+                </form>    
+        </div>
+    <body>
+        <footer>
+            &#169; This Calculator belongs to Juan David Rodriguez
+        </footer>
+    </body>
+</html>
